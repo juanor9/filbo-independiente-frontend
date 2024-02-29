@@ -1,9 +1,10 @@
 @import "./colors";
+@import "./mixins";
 
 .home {
-  &__content-container{
+  &__content-container {
     padding: 0 2rem;
-    & section{
+    & section {
       margin: 2rem 0;
     }
   }
@@ -15,20 +16,27 @@
     background-image: url("https://feriadellibro.com/img/spot-web-campana.jpg");
     background-size: cover;
     background-position: center;
+    @include respond-to("medium") {
+      height: 20rem;
+    }
   }
-  &__seventeen{
+  &__seventeen {
     text-align: center;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &-copy{
+    @include respond-to("medium") {
+      flex-direction: row;
+      gap: 2rem;
+    }
+    &-copy {
       font-size: 0.75rem;
       text-align: left;
       line-height: 1.35em;
     }
-    &-button{
+    &-button {
       margin: 0.6rem 0;
       width: 100%;
       padding: 0.5rem;
