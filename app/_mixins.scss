@@ -1,8 +1,35 @@
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == 'medium' {
-    @media (min-width: 700px) { @content; }
+  @if $breakpoint == "medium" {
+    @media (min-width: 700px) {
+      @content;
+    }
+  } @else if $breakpoint == "large" {
+    @media (min-width: 1400px) {
+      @content;
+    }
   }
-  @else if $breakpoint == 'large' {
-    @media (min-width: 1400px) { @content; }
-  }
+}
+
+@mixin main-button {
+  margin: 0.6rem 0;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: $main-accent;
+  border: none;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+@mixin secondary-button {
+  margin: 0.6rem 0;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: $secondary-accent;
+  border: none;
+  color: $white;
+  // text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
 }

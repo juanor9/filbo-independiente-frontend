@@ -1,0 +1,14 @@
+@import '../../colors';
+@import '../../mixins';
+
+.publishers{
+  background-color: $clear;
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: scroll;
+  padding: 0.6rem 1rem;
+  margin:.7rem 0;
+  @include respond-to("medium") {
+    gap: 1rem;
+  }
+}
