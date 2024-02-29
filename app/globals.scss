@@ -1,4 +1,5 @@
 @import "./colors";
+@import "./mixins";
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Yuji+Syuku&display=swap");
 * {
   box-sizing: border-box;
@@ -12,13 +13,16 @@ body {
   overflow-x: hidden;
   font-family: "Urbanist", sans-serif;
   font-size: 18px;
+  @include respond-to("large") {
+    font-size: 35px;
+  }
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-h1{
+h1 {
   font-size: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -41,7 +45,7 @@ h1{
     display: flex;
     gap: 1.62rem;
     padding: 0.75rem;
-    &__filbo{
+    &__filbo {
       font-size: 1.5625rem;
     }
   }
@@ -50,22 +54,22 @@ h1{
     height: 2.8125rem;
     flex-shrink: 0;
   }
-  &-footer{
+  &-footer {
     background: #101010;
     color: $white;
     padding: 0.6rem 1.6rem;
-    &__logo{
+    &__logo {
       display: flex;
       flex-direction: column;
     }
-    &__filbo{
+    &__filbo {
       font-size: 1.5625rem;
       font-weight: 600;
     }
   }
 }
 
-button{
+button {
   font-family: "Urbanist", sans-serif;
 }
 .placeholder {
