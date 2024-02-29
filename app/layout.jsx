@@ -1,4 +1,6 @@
 import "./globals.scss";
+import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: "Create Next App",
@@ -11,12 +13,18 @@ export default function RootLayout({ children }) {
       <body>
         <header className="main-header">
           <div className="main-title">
+            
             <picture className="main-logo">
-              <img
+            <Link href="/">
+              <Image
                 src="filbo-logo.svg"
                 alt="Feria Internacional del Libro de Bogotá"
-              ></img>
+                width= {130}
+                height= {60}
+              ></Image>
+              </Link>
             </picture>
+            
             <h1>
               <span className="main-title__filbo">FILBo</span>
               <span>Independiente</span>
@@ -24,7 +32,7 @@ export default function RootLayout({ children }) {
           </div>
           <div className="main-date">17 abril al 02 mayo en Corferias</div>
         </header>
-        <main>{children}</main>
+        {children}
         <footer className="main-footer">
           <p className="main-footer__logo">
             <span className="main-footer__filbo">FILBo</span>

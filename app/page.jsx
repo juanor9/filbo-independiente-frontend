@@ -1,8 +1,10 @@
 import "./page.scss";
+import Link from 'next/link'
+import HomePublishers from "./components/HomePublishers/HomePublishers";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <div>
         <div className="home__banner" role="img" aria-label="Banner FILBo" />
       </div>
@@ -22,14 +24,20 @@ export default function Home() {
         </article>
       </section>
       <section className="home__publishers">
-        <h2>Editoriales independientes</h2>
-        <p className="placeholder">Listado de editoriales participantes</p>
+        <h2 className="home__publishers-title">Editoriales independientes</h2>
+        <HomePublishers />
+        <Link 
+        href="/editoriales"
+        className="home__publishers-all"
+        >
+          Ver todas las editoriales
+          </Link>
       </section>
       <section className="home__books">
         <h2>Libros destacados</h2>
         <p className="placeholder">Listado de libros destacados</p>
       </section>
       </div>
-    </>
+    </main>
   );
 }

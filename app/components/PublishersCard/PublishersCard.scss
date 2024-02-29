@@ -1,0 +1,8 @@
+@import '../../colors';
+@import '../../mixins';
+
+.publishers-card{
+  &__button{
+    @include secondary-button;
+  }
+}
