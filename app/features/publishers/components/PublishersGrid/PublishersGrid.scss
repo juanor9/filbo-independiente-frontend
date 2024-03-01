@@ -1,0 +1,16 @@
+@import "../../../../colors";
+@import "../../../../mixins";
+
+.publishers-grid{
+  min-height: 100lvh;
+  margin-top: 1rem;
+  display: grid;
+  @include respond-to("medium") {
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+  @include respond-to("large") {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}

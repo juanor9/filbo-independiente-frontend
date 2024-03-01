@@ -1,0 +1,24 @@
+@import "../../../../colors";
+@import "../../../../mixins";
+
+.publishers-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__name{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem
+  }
+  &__button{
+    @include secondary-button;
+  }
+  &__logo {
+    max-width: 100%;
+    padding: 0;
+    font-size: 0.8rem;
+    @include respond-to("medium") {
+      max-width: 100%;
+    }
+  }
+}

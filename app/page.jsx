@@ -1,8 +1,10 @@
 import "./page.scss";
 import Link from 'next/link'
-import HomePublishers from "./components/HomePublishers/HomePublishers";
+import HomePublishers from "./features/publishers/components/HomePublishers/HomePublishers";
 
 export default function Home() {
+
+
   return (
     <main>
       <div>

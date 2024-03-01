@@ -1,4 +1,4 @@
-import PublishersGrid from "../components/PublishersGrid/PublishersGrid";
+import PublishersGrid from "../features/publishers/components/PublishersGrid/PublishersGrid";
 import './PublishersPage.scss';
 
 const PublishersPage = () => {
